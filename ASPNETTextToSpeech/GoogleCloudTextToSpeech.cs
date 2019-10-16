@@ -13,6 +13,7 @@ namespace ASPNETTextToSpeech
         static TextToSpeechClient client;
         public GoogleCloudTextToSpeech()
         {
+            //https://cloud.google.com
             //As the google api needs to get my own cred path(which I apply from google) from Environment variable. Therefore we need to add 'GOOGLE_APPLICATION_CREDENTIALS' variable to system path during the application running til it ends.
             Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Credentials", "[YOUR CREDENTIALS].json"));
             client = TextToSpeechClient.Create();
